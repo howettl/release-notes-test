@@ -1,5 +1,13 @@
 # Changelog
 
+## ⛅[v1.1.0](https://github.com/mayfieldrobotics/aws_cloud/releases/tag/cloud-1.1.0)
+
+#### Bug Fixes
+
+-  Pr6 [#6](https://github.com/howettl/release-notes-test/pull/6)
+
+---
+
 ## ⛅[v0.2.0](https://github.com/mayfieldrobotics/aws_cloud/releases/tag/v0.2.0)
 
 #### Features

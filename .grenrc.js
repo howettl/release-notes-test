@@ -10,7 +10,7 @@ module.exports = {
     template: {
         label: function () { return "" },
         release: function (placeholders) {
-          return `## ⛅[${placeholders.release.replace('cloud-', '')}](https://github.com/mayfieldrobotics/aws_cloud/releases/tag/${placeholders.release})\n${placeholders.body}`
+          return `## ⛅[${placeholders.release.replace('cloud-', '')}](https://github.com/mayfieldrobotics/aws_cloud/releases/tag/${placeholders.release.replace('vcloud', 'cloud')})\n${placeholders.body}`
         }
     },
     "changelogFilename": "CHANGELOG.md"
