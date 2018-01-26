@@ -2,18 +2,19 @@ const RELEASE_LINK_FORMAT = 'https://github.com/howettl/release-notes-test/relea
 
 module.exports = {
     "dataSource": "prs",
-    "prefix": "v",
+    "prefix": "",
     "ignoreLabels": ["duplicate", "good first issue", "help wanted", "invalid", "question", "ready for release", "wontfix"],
     "onlyMilestones": false,
     "groupBy": {
-        "Features": ["enhancement"],
-        "Bug Fixes": ["bug"]
+        "New Features": ["enhancement"],
+        "Bug Fixes and Other Changes": ["bug"]
     },
     template: {
         label: function () { return "" },
         release: function (placeholders) {
-          return `## ☁️⛅🔥[${placeholders.release.replace('cloud-', '')}](${RELEASE_LINK_FORMAT}/${placeholders.release.replace('vcloud', 'cloud')})\n${placeholders.body}`
-        }
+          return `## ☁️⛅🔥[${placeholders.release.replace('cloud-', '')}](${RELEASE_LINK_FORMAT}/${placeholders.release})\n${placeholders.body}`
+        },
+        group: function(placeholders) { return `## ${placeholders.heading}\n` }
     },
     "changelogFilename": "CHANGELOG.md"
 }
